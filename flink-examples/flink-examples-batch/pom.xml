@@ -44,6 +44,12 @@ under the License.
 			<artifactId>flink-scala_2.11</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-mapreduce-examples</artifactId>
+			<version>${hadoop.version}</version>
+		</dependency>
 	</dependencies>
 	
 	
@@ -347,6 +353,52 @@ under the License.
 							</includes>
 						</configuration>
 					</execution>
+
+					<!-- GraySort with Hadoop Text Format -->
+					<execution>
+						<id>GraySort</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<classifier>GraySort</classifier>
+
+							<archive>
+								<manifestEntries>
+									<program-class>org.apache.flink.examples.java.sort.GraySort</program-class>
+								</manifestEntries>
+							</archive>
+
+							<includes>
+								<include>**/java/sort/*</include>
+							</includes>
+						</configuration>
+					</execution>
+
+					<!-- GraySort with Record Format -->
+					<execution>
+						<id>GraySort2</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<classifier>GraySort2</classifier>
+
+							<archive>
+								<manifestEntries>
+									<program-class>org.apache.flink.examples.java.sort.GraySort2</program-class>
+								</manifestEntries>
+							</archive>
+
+							<includes>
+								<include>**/java/sort/*</include>
+								<include>**/java/sort/util/*</include>
+							</includes>
+						</configuration>
+					</execution>
+
 				</executions>
 			</plugin>
 
@@ -372,6 +424,8 @@ under the License.
 								<copy file="${project.basedir}/target/flink-examples-batch_2.11-${project.version}-WebLogAnalysis.jar" tofile="${project.basedir}/target/WebLogAnalysis.jar" />
 								<copy file="${project.basedir}/target/flink-examples-batch_2.11-${project.version}-WordCount.jar" tofile="${project.basedir}/target/WordCount.jar" />
 								<copy file="${project.basedir}/target/flink-examples-batch_2.11-${project.version}-DistCp.jar" tofile="${project.basedir}/target/DistCp.jar" />
+								<copy file="${project.basedir}/target/flink-examples-batch_2.11-${project.version}-GraySort.jar" tofile="${project.basedir}/target/GraySort.jar" />
+								<copy file="${project.basedir}/target/flink-examples-batch_2.11-${project.version}-GraySort2.jar" tofile="${project.basedir}/target/GraySort2.jar" />
 							</target>
 						</configuration>
 					</execution>

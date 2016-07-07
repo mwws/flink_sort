@@ -93,7 +93,7 @@ under the License.
 							<finalName>maven</finalName>
 							<attach>false</attach>
 							<descriptors>
-								<descriptor>src/test/assembly/test-assembly.xml</descriptor>
+								<descriptor>${project.basedir}/src/test/assembly/test-assembly.xml</descriptor>
 							</descriptors>
 						</configuration>
 					</execution>

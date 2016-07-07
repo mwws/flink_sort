@@ -353,7 +353,7 @@ under the License.
 							<finalName>kmeans</finalName>
 							<attach>false</attach>
 							<descriptors>
-								<descriptor>src/test/assembly/test-kmeans-assembly.xml</descriptor>
+								<descriptor>${project.basedir}/src/test/assembly/test-kmeans-assembly.xml</descriptor>
 							</descriptors>
 						</configuration>
 					</execution>
@@ -372,7 +372,7 @@ under the License.
 							<finalName>usercodetype</finalName>
 							<attach>false</attach>
 							<descriptors>
-								<descriptor>src/test/assembly/test-usercodetype-assembly.xml</descriptor>
+								<descriptor>${project.basedir}/src/test/assembly/test-usercodetype-assembly.xml</descriptor>
 							</descriptors>
 						</configuration>
 					</execution>
@@ -391,7 +391,7 @@ under the License.
 							<finalName>customsplit</finalName>
 							<attach>false</attach>
 							<descriptors>
-								<descriptor>src/test/assembly/test-custominput-assembly.xml</descriptor>
+								<descriptor>${project.basedir}/src/test/assembly/test-custominput-assembly.xml</descriptor>
 							</descriptors>
 						</configuration>
 					</execution>
@@ -410,7 +410,7 @@ under the License.
 							<finalName>streaming-customsplit</finalName>
 							<attach>false</attach>
 							<descriptors>
-								<descriptor>src/test/assembly/test-streaming-custominput-assembly.xml</descriptor>
+								<descriptor>${project.basedir}/src/test/assembly/test-streaming-custominput-assembly.xml</descriptor>
 							</descriptors>
 						</configuration>
 					</execution>
@@ -429,7 +429,7 @@ under the License.
 							<finalName>streamingclassloader</finalName>
 							<attach>false</attach>
 							<descriptors>
-								<descriptor>src/test/assembly/test-streamingclassloader-assembly.xml</descriptor>
+								<descriptor>${project.basedir}/src/test/assembly/test-streamingclassloader-assembly.xml</descriptor>
 							</descriptors>
 						</configuration>
 					</execution>
@@ -448,7 +448,7 @@ under the License.
 							<finalName>streaming-checkpointed-classloader</finalName>
 							<attach>false</attach>
 							<descriptors>
-								<descriptor>src/test/assembly/test-streaming-state-checkpointed-classloader-assembly.xml</descriptor>
+								<descriptor>${project.basedir}/src/test/assembly/test-streaming-state-checkpointed-classloader-assembly.xml</descriptor>
 							</descriptors>
 						</configuration>
 					</execution>
